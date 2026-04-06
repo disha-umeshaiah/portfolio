@@ -1,0 +1,1355 @@
+:root {
+  --bg:#0a0a0a;
+  --text:#fff;
+  --pink:#ff7ab6;
+}
+
+body {
+  margin:0;
+  font-family:monospace;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* BG */
+#bg {
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* NAVBAR BASE */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(10, 10, 10, 0.5);   /* glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+
+  z-index: 1000;
+}
+
+/* NAV LINKS */
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+/* LINK STYLE */
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+
+/* 🔥 UNDERLINE ANIMATION */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+
+  background: var(--pink);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* HOVER COLOR */
+nav ul li a:hover {
+  color: var(--pink);
+}
+
+/* 🎯 ACTIVE LINK */
+nav ul li a.active {
+  color: var(--pink);
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* LOGO + TOGGLE POSITION FIX */
+#logo {
+  position: absolute;
+  left: 30px;
+}
+
+#toggle {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:80px;
+}
+
+.hero-name {
+  font-size:90px;
+}
+
+.first {color:var(--pink);}
+.last {color:white;}
+
+.buttons a {
+  margin:8px;
+  padding:8px;
+  border:1px solid var(--pink);
+}
+
+/* MAC */
+.mac-window {
+  border:1px solid var(--pink);
+  padding:10px;
+}
+
+/* SECTION (FIXED) */
+section {
+  padding:60px 40px;
+  margin:0;
+  text-align:center;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.card {
+  border:1px solid var(--pink);
+  padding:15px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+/* CONTACT */
+.contact-container {
+  display:flex;
+  justify-content:center;
+}
+
+button {
+  background:var(--pink);
+  border:none;
+  padding:10px;
+}
+
+/* 🔥 MAKE "math + code + physics" BIGGER */
+.subtitle {
+  font-size: 26px !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ddd;
+  margin-top: 15px;
+}
+
+
+/* 🤍 MAKE ALL TEXT INSIDE BOXES WHITE */
+.card p,
+.skill-col p,
+.skills-grid p,
+.mac-window p,
+.project-card p {
+  color: #ffffff !important;
+}
+
+
+/* ✨ HEADINGS INSIDE BOXES */
+.card h3,
+.skill-col h3,
+.project-card h3 {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* OPTIONAL: better box contrast */
+.card,
+.skill-col,
+.project-card,
+.mac-window {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* 🔥 BUTTON CONTAINER SPACING */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;              /* space between buttons */
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* 🔥 HERO BUTTON BOXES (UPGRADED) */
+.cta-buttons a {
+  padding: 16px 32px;              /* bigger */
+  font-size: 17px;
+  font-weight: 500;
+
+  color: #ffffff !important;       /* white text */
+  text-decoration: none;
+
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.02);
+
+  transition: all 0.3s ease;
+}
+
+/* ✨ GLOW OUTLINE + HOVER */
+.cta-buttons a:hover {
+  border-color: #ff7ab6;
+
+  box-shadow:
+    0 0 10px rgba(255,122,182,0.5),
+    0 0 20px rgba(255,122,182,0.4),
+    0 0 40px rgba(255,122,182,0.3);
+
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* 📏 SPACE BETWEEN THEM */
+.cta-buttons {
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* 🔥 FORCE STYLE ALL HERO BUTTONS */
+.hero a,
+.buttons a,
+.cta-buttons a,
+a.btn {
+  padding: 16px 32px !important;
+  font-size: 17px !important;
+
+  color: #ffffff !important;   /* 🤍 WHITE TEXT */
+  text-decoration: none;
+
+  border: 2px solid rgba(255,255,255,0.3) !important;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.03);
+
+  transition: all 0.3s ease;
+}
+
+/* ✨ GLOW EFFECT */
+.hero a:hover,
+.buttons a:hover,
+.cta-buttons a:hover,
+a.btn:hover {
+  border-color: #ff7ab6 !important;
+
+  box-shadow:
+    0 0 10px rgba(255,122,182,0.6),
+    0 0 20px rgba(255,122,182,0.5),
+    0 0 40px rgba(255,122,182,0.4);
+
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* 📏 SPACING */
+.hero .buttons,
+.cta-buttons,
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* 🖥️ MAC WINDOW UPGRADE (BIGGER + 3D) */
+.mac-window {
+  width: 420px;              /* 🔥 bigger */
+  height: 260px;
+
+  background: #0d0d0d;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  overflow: hidden;
+
+  /* ✨ 3D EFFECT */
+  transform: perspective(1000px) rotateY(-8deg) rotateX(4deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  /* 💗 glow */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    0 0 20px rgba(255,122,182,0.2);
+}
+
+/* 🔥 HOVER = MORE 3D */
+.mac-window:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.03);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.8),
+    0 0 40px rgba(255,122,182,0.4);
+}
+
+/* 🧠 TOP BAR (mac style) */
+.mac-header {
+  height: 36px;
+  background: #1a1a1a;
+
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+/* 🔴 🟡 🟢 BUTTONS */
+.mac-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.mac-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.mac-dots .red { background: #ff5f56; }
+.mac-dots .yellow { background: #ffbd2e; }
+.mac-dots .green { background: #27c93f; }
+
+/* 💻 SCREEN CONTENT */
+.mac-body {
+  padding: 15px;
+  color: #00ffcc;  /* terminal vibe */
+
+  font-family: monospace;
+  font-size: 14px;
+}
+
+/* 🔥 PROJECT GRID - CLEAN 2 PER ROW */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 per row */
+  gap: 40px;                              /* 🔥 more space */
+  margin-top: 50px;
+}
+
+/* 📦 BIG PROJECT BOX */
+.project-card {
+  padding: 30px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  min-height: 220px;   /* 🔥 bigger height */
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* ✨ HOVER EFFECT */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  border-color: #ff7ab6;
+
+  box-shadow:
+    0 0 20px rgba(255,122,182,0.3),
+    0 0 40px rgba(255,122,182,0.2);
+}
+
+/* 🧠 TITLE */
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* 💗 TITLE HOVER */
+.project-card:hover h3 {
+  color: #ff7ab6;
+}
+
+/* 📄 DESCRIPTION */
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* 🧾 BOTTOM INFO */
+.project-footer {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* 💗 STATUS */
+.status {
+  color: #ff7ab6;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status::before {
+  content: "●";
+  font-size: 10px;
+}
+
+/* 📅 YEAR */
+.year {
+  color: #aaa;
+}
+
+/* 🔥 HEADING STYLE */
+.projects-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.projects-title .white {
+  color: #ffffff;
+}
+
+.projects-title .pink {
+  color: #ff7ab6;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.7);
+}
+
+/* 🌊 LETTER WAVE ANIMATION */
+.wave {
+  display: inline-block;
+  animation: waveText 2s ease-in-out infinite;
+}
+
+@keyframes waveText {
+  0% { transform: translateY(0px); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 📄 DESCRIPTION BELOW HEADING */
+.projects-desc {
+  text-align: center;
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+/* 📦 PROJECT CARD */
+.project-card {
+  padding: 30px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  min-height: 220px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* ✨ HOVER */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  border-color: #ff7ab6;
+
+  box-shadow:
+    0 0 20px rgba(255,122,182,0.3),
+    0 0 40px rgba(255,122,182,0.2);
+}
+
+/* 🧠 HEADING (BLACK as you asked) */
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000000;   /* 🔥 BLACK */
+  background: #ffffff;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* 📄 DESCRIPTION */
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* 📌 FOOTER */
+.project-footer {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* 📅 YEAR */
+.year {
+  color: #aaa;
+}
+
+/* 💗 STATUS */
+.status {
+  color: #ff7ab6;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status::before {
+  content: "●";
+  font-size: 10px;
+}
+
+/* 🔥 UPDATE EXISTING PROJECT CARDS */
+
+/* 🧠 TITLE (BLACK PILL STYLE) */
+.project-card h3 {
+  color: #000 !important;
+  background: #fff;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 6px;
+
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* 📄 DESCRIPTION (WHITE TEXT) */
+.project-card p {
+  color: #ffffff !important;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 📌 POSITION FOOTER ELEMENTS */
+.project-card {
+  position: relative;
+  padding-bottom: 50px; /* space for footer */
+}
+
+/* 📅 YEAR (BOTTOM LEFT) */
+.project-card .year {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* 💗 STATUS (BOTTOM RIGHT) */
+.project-card .status {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+
+  color: #ff7ab6;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 💗 DOT */
+.project-card .status::before {
+  content: "●";
+  font-size: 10px;
+}
+
+/* 🔥 ABOUT HEADING */
+.about-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.about-title .white {
+  color: #ffffff;
+}
+
+.about-title .pink {
+  color: #ff7ab6;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.7);
+}
+
+/* 🌊 WAVE ANIMATION */
+.wave {
+  display: inline-block;
+  animation: waveText 2s ease-in-out infinite;
+}
+
+@keyframes waveText {
+  0% { transform: translateY(0px); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 📦 LAYOUT */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* 📝 TEXT */
+.about-text {
+  flex: 1;
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* 📸 IMAGE */
+.about-image img {
+  width: 280px;
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    0 0 20px rgba(255,122,182,0.3);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+}
+
+/* 🔥 SKILLS HEADING */
+.skills-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.skills-title .pink {
+  color: #ff7ab6;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.7);
+}
+
+/* 🌊 SAME WAVE EFFECT */
+.wave {
+  display: inline-block;
+  animation: waveText 2s ease-in-out infinite;
+}
+
+/* 📊 CONTAINER */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* 📦 COLUMN */
+.skill-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* 🧠 COLUMN HEADING */
+.skill-col h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* 📏 REMOVE DEFAULT BULLETS */
+.skill-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ✨ CUSTOM LINE POINTERS */
+.skill-col li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* 💗 GLOWING LINE */
+.skill-col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+
+  width: 12px;
+  height: 2px;
+
+  background: #ff7ab6;
+
+  box-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* 🔗 RESEARCH LINK BUTTON */
+.research-link {
+  display: inline-block;
+  margin-top: 15px;
+
+  font-size: 14px;
+  color: #ff7ab6;
+  text-decoration: none;
+
+  border-bottom: 1px solid #ff7ab6;
+  padding-bottom: 2px;
+
+  transition: all 0.3s ease;
+}
+
+/* ✨ HOVER EFFECT */
+.research-link:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6;
+
+  transform: translateX(5px);
+}
+
+/* 💗 FULL PINK GLOW HEADING */
+.research-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+
+  color: #ff7ab6;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.8);
+}
+
+/* 🌊 JUMP ANIMATION */
+.wave {
+  display: inline-block;
+  animation: waveText 2s ease-in-out infinite;
+}
+
+@keyframes waveText {
+  0% { transform: translateY(0px); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 🔥 HEADING */
+.contact-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.contact-title .white {
+  color: #ffffff;
+}
+
+.contact-title .pink {
+  color: #ff7ab6;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.8);
+}
+
+/* 🌊 JUMP EFFECT */
+.wave {
+  display: inline-block;
+  animation: waveText 2s ease-in-out infinite;
+}
+
+/* 📄 DESCRIPTION */
+.contact-desc {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* 📦 LAYOUT */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ✉️ FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+}
+
+/* 🧾 INPUT BOXES */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+
+  outline: none;
+
+  /* ✨ glow + 3D */
+  box-shadow:
+    0 5px 15px rgba(0,0,0,0.5),
+    0 0 10px rgba(255,122,182,0.2);
+
+  transition: 0.3s;
+}
+
+/* ✨ INPUT HOVER */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff7ab6;
+
+  box-shadow:
+    0 0 10px rgba(255,122,182,0.5),
+    0 0 20px rgba(255,122,182,0.3);
+}
+
+/* 📩 BUTTON */
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+
+  background: #ff7ab6;
+  color: #fff;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* ✨ BUTTON HOVER */
+.contact-form button:hover {
+  box-shadow:
+    0 0 10px rgba(255,122,182,0.7),
+    0 0 20px rgba(255,122,182,0.5);
+
+  transform: translateY(-2px);
+}
+
+/* 🔥 CONTACT RIGHT SIDE FIX */
+.contact-info {
+  display: flex;
+  flex-direction: row;     /* force horizontal */
+  align-items: flex-start;
+  gap: 25px;
+}
+
+/* 💗 LINE */
+.line {
+  width: 3px;
+  min-height: 180px;      /* IMPORTANT */
+  background: #ff7ab6;
+
+  box-shadow:
+    0 0 10px #ff7ab6,
+    0 0 20px #ff7ab6;
+
+  flex-shrink: 0;         /* prevents shrinking */
+}
+
+/* 📍 CONTENT */
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🧠 TEXT */
+.info-content h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.info-content p {
+  margin: 0;
+  color: #ccc;
+}
+
+/* 🌤️ LIGHT MODE (SOFT WHITE) */
+.light-mode {
+  background: #f5f5f7;   /* 🔥 soft grey-white */
+  color: #111;
+}
+/* fix all white text in light mode */
+.light-mode .white,
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode p,
+.light-mode a {
+  color: #111 !important;
+}
+
+.light-mode .project-card,
+.light-mode .mac-box,
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+  background: #ffffff;
+  color: #111;
+}
+/* toggle button */
+#theme-toggle {
+  font-size: 26px;   /* 🔥 bigger */
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* 🔥 LOGO + TITLE */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🖼️ LOGO IMAGE */
+.logo img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+
+  /* ✨ glow effect */
+  filter: drop-shadow(0 0 5px #ff7ab6);
+}
+
+/* 🔤 TEXT */
+.logo span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff7ab6;
+}
+
+/* ✨ CURSOR GLOW EFFECT */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  z-index: 999;
+
+  background: radial-gradient(
+    circle 150px at var(--x, 50%) var(--y, 50%),
+    rgba(255, 122, 182, 0.15),
+    transparent 60%
+  );
+
+  transition: background 0.1s;
+}
+
+/* 🔥 FOOTER */
+.footer {
+  padding: 60px 10%;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 50px;
+}
+
+/* layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* LEFT */
+.footer-left {
+  max-width: 400px;
+}
+
+.logo-text {
+  font-size: 28px;
+  color: #ff7ab6;
+
+  text-shadow:
+    0 0 5px #ff7ab6,
+    0 0 15px rgba(255,122,182,0.7);
+}
+
+.footer-left p {
+  color: #ccc;
+  margin: 10px 0;
+}
+
+/* STATUS */
+.status {
+  margin-top: 20px;
+  font-family: monospace;
+}
+
+.status span {
+  color: #ff7ab6;
+}
+
+/* LINKS */
+.footer-links h3,
+.footer-connect h3 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff7ab6;
+  transform: translateX(5px);
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.social-icons a:hover {
+  color: #ff7ab6;
+
+  box-shadow:
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.6);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  color: #aaa;
+}
+
+.footer-extra a {
+  margin-left: 20px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-extra a:hover {
+  color: #ff7ab6;
+}
+
+/* ✨ ANIMATED GLOW LINE */
+.footer-bottom {
+  position: relative;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: none; /* remove old line */
+}
+
+/* glowing animated line */
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff7ab6,
+    transparent
+  );
+
+  background-size: 200% 100%;
+  animation: glowMove 4s linear infinite;
+
+  box-shadow:
+    0 0 5px #ff7ab6,
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.7);
+}
+
+/* animation */
+@keyframes glowMove {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.connect a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+
+  margin-right: 10px;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+/* hover glow */
+.connect a:hover {
+  color: #ff7ab6;
+  border-color: #ff7ab6;
+
+  box-shadow:
+    0 0 10px #ff7ab6,
+    0 0 20px #ff7ab6;
+}
+
+/* icon size */
+.connect i {
+  font-size: 18px;
+}
+
+/* CONNECT ONLINE SECTION */
+.connect-online h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* container */
+.connect-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* each row */
+.connect-icons a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 15px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: white;
+
+  transition: 0.3s;
+}
+
+/* icon */
+.connect-icons i {
+  font-size: 18px;
+}
+
+/* text */
+.connect-icons span {
+  font-size: 14px;
+}
+
+/* hover glow */
+.connect-icons a:hover {
+  color: #ff7ab6;
+  border-color: #ff7ab6;
+
+  box-shadow:
+    0 0 10px #ff7ab6,
+    0 0 20px rgba(255,122,182,0.6);
+
+  transform: translateX(5px);
+}
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Mac box */
+  .mac-box {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  /* Sections */
+  section {
+    padding: 40px 20px;
+  }
+
+  /* Project boxes */
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skills */
+  .skills-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Contact section */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
