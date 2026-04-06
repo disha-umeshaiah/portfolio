@@ -1353,3 +1353,17 @@ body::before {
     gap: 15px;
   }
 }
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .equation {
+    font-size: 40px; /* smaller on mobile */
+  }
+
+  .spark {
+    transform: scale(0.7);
+  }
+}
