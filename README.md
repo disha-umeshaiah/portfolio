@@ -14,4 +14,12 @@ This portfolio is a showcase of my commitment to high-stakes logic and immersive
 
 🔸Performance First: Built for speed, despite the visual complexity.
 
+⚪️Project Structure
+
+🔸index.html: The core structure and content.
+
+🔸style.css: The engine behind the neon aesthetics and layout.
+
+🔸script.js: The logic driving the "unnecessarily" complex animations.
+
 Designed & Engineered by Disha Umeshaiah.
