@@ -3,6 +3,7 @@
 Forty-eight hours of relentless coding, condensed into one digital space. Built to prove I can make animations far more complicated than they probably need to be.
 
 ⚪️The Vision
+
 This portfolio is a showcase of my commitment to high-stakes logic and immersive UI/UX. It’s not just a collection of links—it’s a playground for experiments in motion, neon aesthetics, and software architecture.
 
 ⚪️Key Highlights
