@@ -6,6 +6,7 @@ Forty-eight hours of relentless coding, condensed into one digital space. Built 
 This portfolio is a showcase of my commitment to high-stakes logic and immersive UI/UX. It’s not just a collection of links—it’s a playground for experiments in motion, neon aesthetics, and software architecture.
 
 ⚪️Key Highlights
+
 🔸Complex Motion: Custom-built animations designed for maximum visual impact.
 
 🔸Aesthetic Engineering: A minimalist, sophisticated layout with a signature neon glow.
