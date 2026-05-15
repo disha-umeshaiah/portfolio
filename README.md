@@ -7,7 +7,9 @@ This portfolio is a showcase of my commitment to high-stakes logic and immersive
 
 ⚪️Key Highlights
 🔸Complex Motion: Custom-built animations designed for maximum visual impact.
+
 🔸Aesthetic Engineering: A minimalist, sophisticated layout with a signature neon glow.
+
 🔸Performance First: Built for speed, despite the visual complexity.
 
 Designed & Engineered by Disha Umeshaiah.
