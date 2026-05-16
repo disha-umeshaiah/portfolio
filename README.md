@@ -1,25 +1,127 @@
-# disha's portfolio 
+# 🌸 Disha's Portfolio
 
-Forty-eight hours of relentless coding, condensed into one digital space. Built to prove I can make animations far more complicated than they probably need to be.
+A high-performance animated portfolio website built to explore the intersection of immersive UI/UX, motion engineering, and frontend architecture.
 
-⚪️The Vision
+Designed and developed over 48 hours of relentless iteration, this project pushes visual interaction beyond conventional portfolio design — transforming a static personal website into an interactive digital experience.
 
-This portfolio is a showcase of my commitment to high-stakes logic and immersive UI/UX. It’s not just a collection of links—it’s a playground for experiments in motion, neon aesthetics, and software architecture.
+Built to demonstrate advanced animation systems, aesthetic precision, and deliberate frontend experimentation.
 
-⚪️Key Highlights
+---
 
-🔸Complex Motion: Custom-built animations designed for maximum visual impact.
+## ✨ Live Demo
 
-🔸Aesthetic Engineering: A minimalist, sophisticated layout with a signature neon glow.
+View the deployed portfolio here:  
+https://www.dishaumeshaiah.com
 
-🔸Performance First: Built for speed, despite the visual complexity.
+---
 
-⚪️Project Structure
+## The Vision
 
-🔸index.html: The core structure and content.
+This portfolio was built as more than a personal website.
 
-🔸style.css: The engine behind the neon aesthetics and layout.
+It serves as a technical playground for exploring:
 
-🔸script.js: The logic driving the "unnecessarily" complex animations.
+- Advanced animation logic
+- Neon-inspired visual systems
+- Performance-conscious frontend design
+- Interactive storytelling through motion
 
-Designed & Engineered by Disha Umeshaiah.
+The goal was simple:
+
+Build something visually distinctive enough to stand out, while maintaining clean architecture and responsive performance.
+
+---
+
+## Key Highlights
+
+### 🎞 Complex Motion Systems
+Custom-engineered animation sequences built for layered interaction and fluid transitions.
+
+Includes:
+
+- Scroll-triggered effects
+- Dynamic hover interactions
+- Sequenced entrance animations
+- dark/light mode
+
+---
+
+### 🌸 Aesthetic Engineering
+A minimalist pink neon interface designed with strong visual identity.
+
+Features:
+
+- Signature glow effects
+- High-contrast typography
+- Glassmorphism-inspired elements
+- Immersive interactive transitions
+
+---
+
+### ⚡ Performance-Focused Design
+Built with visual complexity in mind without sacrificing responsiveness.
+
+Optimised for:
+
+- Fast rendering
+- Smooth animation performance
+- Responsive layouts across devices
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## Project Structure
+
+```plaintext
+portfolio-website/
+│
+├── index.html     # Core structure and content
+├── style.css      # Neon aesthetics and layout system
+├── script.js      # Animation logic and interaction systems
+└── assets/        # Images, icons, supporting media
+```
+
+---
+
+## Core Engineering Focus
+
+This project explores:
+
+### Motion Architecture
+Building animation systems that feel intentional rather than decorative.
+
+### UI Precision
+Designing interactions that reinforce visual identity.
+
+### Frontend Experimentation
+Testing how far animation complexity can be pushed while preserving usability.
+
+---
+
+## Why This Project?
+
+Most portfolio websites prioritise information delivery.
+
+This project was built to demonstrate that frontend engineering can also create atmosphere, personality, and memorable interaction.
+
+It reflects my interest in building software experiences that combine:
+
+- Technical depth
+- Visual sophistication
+- User-focused design
+
+---
+
+## Author
+
+Designed & Engineered by **Disha Umeshaiah**
+
+---
