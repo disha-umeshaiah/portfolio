@@ -1,6 +1,6 @@
 const first="Disha";
 const last="Umeshaiah";
-const tagline="CS + FINANCE + GROWTH";
+const tagline="CS + MATHS + FINANCE";
 
 let i=0,j=0,k=0;
 
